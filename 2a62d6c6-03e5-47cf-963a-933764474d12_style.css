@@ -1,0 +1,56 @@
+/* ===== Cơ bản ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  padding: 16px 24px;
+}
+
+/* ===== Nav ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+nav a {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Chỉ link có class active mới chữ to hơn các link khác */
+nav a.active {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===== Hero section ===== */
+.hero {
+  background-color: #3b1f2b;                /* màu nền dự phòng nếu ảnh lỗi */
+  background-image: url("images/hero.jpg"); /* đúng đường dẫn ảnh */
+  background-size: cover;                   /* phủ kín toàn bộ khối */
+  background-position: center;              /* ảnh căn giữa */
+  background-repeat: no-repeat;             /* không lặp ảnh nền */
+  color: #fff;                              /* chữ màu trắng */
+  min-height: 420px;
+  padding: 60px 24px;
+  border-radius: 8px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); /* giúp chữ trắng dễ đọc trên ảnh */
+}
+
+/* ===== Bài viết ===== */
+/* Bài viết ĐẦU TIÊN trong .posts (dùng first-of-type vì h2 mới là first-child) */
+.posts article:first-of-type {
+  background-color: #ffe4ec; /* hồng nhạt */
+}
+
+/* Đoạn p NGAY SAU h3 trong mỗi article */
+article h3 + p {
+  background-color: #fffbeb; /* vàng rất nhạt */
+}
